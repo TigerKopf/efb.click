@@ -1,0 +1,86 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    background-color: #000;
+    transition: background-color 1s linear, background-image 1s linear;
+  }
+  
+  body.fade-in {
+    background-color: #fff;
+    color: black;
+    background-image: linear-gradient(5000px, rgba(100, 100, 100, 0), rgba(255, 255, 255, 0.5));
+  }
+
+/* Alle Bilder auf der Seite */
+img {
+    opacity: 0;
+    transition: opacity 2s; /* Passe die Dauer nach Bedarf an */
+  }
+  
+  /* Beim Laden der Seite oder nach dem Auslösen eines Events */
+  .fade-in img {
+    opacity: 1;
+  }
+
+.title {
+    text-align: center;
+    font-size: large;
+    padding-top: 20px;
+    width: 200px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.headImg {
+    float: left;
+    width: 30px;
+    margin-top: 28px;
+    margin-left: 60px;
+}
+
+.desc {
+    padding-bottom: 0px;
+}
+
+.main {
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.box {
+    padding-top: 15px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 50px;
+
+    display: grid;
+    grid-template-areas: "text image";
+    grid-gap: 1rem;
+
+}
+
+.boxTitle {
+    display: flex;
+    justify-content: flex-start;
+    grid-area: text;
+}
+
+.boxImg {
+    grid-area: image;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.boxLink {
+    text-decoration: none;
+    color: black;
+}
+
